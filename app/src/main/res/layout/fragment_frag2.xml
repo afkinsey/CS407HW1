@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.frag2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Of the 3 primary colours, how many are blue?"
+        android:id="@+id/frag2Q" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:text="3"
+        android:id="@+id/checkBox3"
+        android:layout_gravity="right|center_vertical" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/checkBox1"
+        android:layout_gravity="right|top" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:id="@+id/checkBox2"
+        android:layout_gravity="right|bottom" />
+
+</FrameLayout>
