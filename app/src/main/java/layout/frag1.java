@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.beef.cs407hw1.MainActivity;
 import com.example.beef.cs407hw1.R;
 
 /**
@@ -23,6 +24,15 @@ import com.example.beef.cs407hw1.R;
  *
  */
 public class frag1 extends Fragment {
+
+
+    public static frag1 newInstance(int index) {
+        frag1 f = new frag1();
+        Bundle args = new Bundle();
+        args.putInt("index", index);
+        f.setArguments(args);
+        return f;
+    }
 
 
     @Override
@@ -38,6 +48,11 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 String ans = whatColour.getText().toString();
+                boolean b;
+
+                b = (ans.equalsIgnoreCase("blue"));
+
+                ((MainActivity)getActivity()).quiz(v);
                 //
 
             }

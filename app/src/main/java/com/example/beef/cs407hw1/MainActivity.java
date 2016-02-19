@@ -22,9 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
         if(v==findViewById(R.id.stButton)){
             frag = new frag1();
+
+            frag = frag1.newInstance();
+
             FragmentManager fragman = getFragmentManager();
             FragmentTransaction fragtrans = fragman.beginTransaction();
             fragtrans.replace(R.id.fragPlace, frag);
+
         }
         if(v==findViewById(R.id.sub1)){
             frag = new frag2();
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(v==findViewById(R.id.sub2)){
-
+            //go to end/print score
 
         }
     }
