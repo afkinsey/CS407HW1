@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Of the 3 primary colours, how many are blue?"
-        android:id="@+id/frag2Q" />
+        android:id="@+id/frag2Q"
+        android:gravity="center_vertical|center_horizontal" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -17,5 +18,12 @@
         android:text="1"
         android:id="@+id/checkBox1"
         android:layout_gravity="center_horizontal|bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/sub2"
+        android:layout_gravity="right|bottom" />
 
 </FrameLayout>
