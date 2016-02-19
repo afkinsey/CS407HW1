@@ -38,6 +38,7 @@ public class frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 String ans = whatColour.getText().toString();
+                //
 
             }
         });
