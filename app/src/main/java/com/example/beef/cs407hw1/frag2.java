@@ -36,22 +36,31 @@ public class frag2 extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_frag2, container, false);
 
+        final CheckBox cb = (CheckBox) v.findViewById(R.id.CB1);
+        cb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+
         Button finish = (Button) v.findViewById(R.id.sub2);
 
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myBox = (CheckBox)v.findViewById(R.id.CB1);
+//                myBox = (CheckBox)v.findViewById(R.id.CB1);
 
                 //boolean b = ((CheckBox)v.findViewById(R.id.CB1)).isChecked();
 
-                if ((myBox.isChecked()))
+                if ((cb.isChecked()))
                 {
                     score++;
                 }
