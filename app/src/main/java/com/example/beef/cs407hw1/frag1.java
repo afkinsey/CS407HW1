@@ -1,35 +1,23 @@
-package layout;
+package com.example.beef.cs407hw1;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.view.View;
 
-import com.example.beef.cs407hw1.MainActivity;
-import com.example.beef.cs407hw1.R;
+import java.util.zip.Inflater;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link frag1.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link frag1#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
 public class frag1 extends Fragment {
 
 
-    public static frag1 newInstance(int index) {
+    public static frag1 newInstance() {
         frag1 f = new frag1();
         Bundle args = new Bundle();
-        args.putInt("index", index);
         f.setArguments(args);
         return f;
     }
@@ -40,9 +28,11 @@ public class frag1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //this should maybe go in the frag1.java
-        final EditText whatColour = (EditText)findViewById(R.id.blueAnswer);
-        TextView textQ = (TextView)findViewById(R.id.blueSquare);
-        Button nextQ = (Button)findViewById(R.id.submitButton);
+        View v = inflater.inflate(R.layout.fragment_frag1, container, false);
+
+        final EditText whatColour = (EditText) v.findViewById(R.id.blueAnswer);
+        TextView textQ = (TextView) v.findViewById(R.id.blueSquare);
+        Button nextQ = (Button) v.findViewById(R.id.submitButton);
 
         nextQ.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +42,21 @@ public class frag1 extends Fragment {
 
                 b = (ans.equalsIgnoreCase("blue"));
 
-                ((MainActivity)getActivity()).quiz(v);
+                int score = 0;
+                if (b)
+                {
+                    score++;
+                }
+
+
+                ((MainActivity)getActivity()).quiz(1, score);
                 //
 
             }
         });
 
 
-        return inflater.inflate(R.layout.fragment_frag1, container, false);
+        return v;
     }
 
 }

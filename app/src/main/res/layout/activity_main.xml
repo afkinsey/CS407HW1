@@ -18,21 +18,22 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/blue"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <fragment
+    <FrameLayout
         android:id="@+id/fragPlace"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" >
 
-
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/blue"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/stButton"
+            android:layout_gravity="center_horizontal|top" />
+    </FrameLayout>
 
 </RelativeLayout>
